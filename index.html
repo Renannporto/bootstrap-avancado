@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suiani Store</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+</head>
+<style>
+    .carousel-img, img{
+        height: 80vh;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .card{
+        border: none;
+    }
+
+    .card-article{
+        height: 70vh;
+    }
+
+    .card-article img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover; 
+}
+
+    #tittle-img-header{
+        height: 10vh;
+        width: 30vh;
+        margin: 0;
+    }
+
+    .card-img-overlay{
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    
+    .tittle-sobre{
+        margin-top: 2vh;
+        margin-bottom: 10vh;
+    }
+
+    .p-sobre-loja{
+        margin: 20px;
+    }
+
+    .brand{
+        margin-top: 10vh;
+        justify-content: space-between;
+        display: flex;
+    }
+    
+    header{
+        z-index: 1;
+    }
+
+    @media (min-width: 641px) and (max-width: 1023px) {
+        .col-4 {
+            flex: 0 0 50%; /* Define 50% da largura */
+            max-width: 50%;
+            margin-bottom: 20px;
+        }
+
+        #loja .card-img-overlay{
+            position: static;
+        }
+}
+
+    @media (max-width: 640px),
+    (max-width: 667px) and (orientation: landscape)  {
+        .col-4 {
+            flex: 0 0 100%; /* Define 100% da largura */
+            max-width: 100%;
+            margin-bottom: 5vh;
+        }
+
+        .rede-social{
+            margin-bottom: 8vh;
+        }
+
+        #loja .card-img-overlay{
+            position: static;
+        }
+}
+</style>
+<body>
+    <header id="header" class="fixed-top bg-white">
+        <div class="navbar navbar-expand-lg">
+            <div class="container">
+                <img src="./6A392FDF-73D8-4CA3-A18D-F2F173ACF1FA.pdf" id="tittle-img-header">
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                <ul class="nav nav-pills navbar-nav">
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            Vestuário
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a href="#" class="text-decoration-none link-dark">Vestido</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#" class="text-decoration-none link-dark">Camiseta</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#" class="text-decoration-none link-dark">Calça</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#casaco" class="text-decoration-none link-dark">Casaco</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#" class="text-decoration-none link-dark">Saia</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#" class="text-decoration-none link-dark">Cropped</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#" class="text-decoration-none link-dark">Macacão</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#" class="text-decoration-none link-dark">Biquini</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#" class="text-decoration-none link-dark">Short e Bermuda</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            Acessórios
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a href="#" class="text-decoration-none link-dark">Boné</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#" class="text-decoration-none link-dark">Chapéu</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#" class="text-decoration-none link-dark">Anél</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#" class="text-decoration-none link-dark">Brinco</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#" class="text-decoration-none link-dark">Colar</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#" class="text-decoration-none link-dark">Bolsa</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#" class="text-decoration-none link-dark">Cachecol</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#" class="text-decoration-none link-dark">Óculos de Sol</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#" class="text-decoration-none link-dark">Cinto</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <li class="dropdown">
+                        <a class="nav-link" href="#contact">Contatos</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="nav-link" href="#loja">Sobre a loja</a>
+                    </li>
+                </ul>
+            </nav>
+            </div>
+        </div>
+    </header>
+    <div>
+        <div class="carousel slide" data-bs-ride="carousel" id="indicator-carousel">
+            <div class="carousel-inner carousel-img">
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="./img/pexels-kseniachernaya-3965551.jpg">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="./img/pexels-kseniachernaya-3965548.jpg">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="./img/pexels-mart-production-7679863.jpg">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="./img/pexels-ron-lach-8387132.jpg">
+                </div>
+            </div>
+            <div class="carousel-indicators">
+                <span type="button" data-bs-target="#indicator-carousel" data-bs-slide-to="0" class="active"></span>
+                <span type="button" data-bs-target="#indicator-carousel" data-bs-slide-to="1"></span>
+                <span type="button" data-bs-target="#indicator-carousel" data-bs-slide-to="2"></span>
+                <span type="button" data-bs-target="#indicator-carousel" data-bs-slide-to="3"></span>
+            </div>
+        </div>
+    </div>
+    <section class="section-vestuario" id="vestuario">
+        <div class="container">
+            <div class="row">
+                <a href="#" class="text-decoration-none link-dark h5 justify-content-center d-flex my-5">VESTUÁRIO</a>
+                <div class="col-4">
+                    <article class="card text-bg-dark card-article">
+                        <img src="./Vestidos/pexels-godisable-jacob-226636-833185.jpg">
+                        <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+                            <h4 class="card-title">V E S T I D O</h4>
+                            <a href="#" class="btn btn-primary">Ver produtos</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-4">
+                    <article class="card text-bg-dark card-article">
+                        <img src="./camiseta/pexels-anntarazevich-4926660.jpg">
+                        <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+                            <h4 class="card-title">C A M I S E T A</h4>
+                            <a href="#" class="btn btn-primary">Ver produtos</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-4">
+                    <article class="card text-bg-dark card-article">
+                        <img src="./calcas/pexels-tima-miroshnichenko-7202783.jpg">
+                        <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+                            <h4 class="card-title">C A L Ç A</h4>
+                            <a href="#" class="btn btn-primary">Ver produtos</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-acessorio">
+        <div class="container">
+            <div class="row">
+                <a href="#" class="text-decoration-none link-dark h5 justify-content-center d-flex my-5">ACESSÓRIOS</a>
+                <div class="col-4">
+                    <article class="card text-bg-dark card-article">
+                        <img src="./camiseta/pexels-alipazani-12513849.jpg">
+                        <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+                            <h4 class="card-title">C H A P É U</h4>
+                            <a href="#" class="btn btn-primary">Ver produtos</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-4">
+                    <article class="card text-bg-dark card-article">
+                        <img src="./cropped/pexels-juan-rosario-660540473-29434360.jpg">
+                        <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center ">
+                            <h4 class="card-title">B O L S A</h4>
+                            <a href="#" class="btn btn-primary">Ver produtos</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-4">
+                    <article class="card text-bg-dark card-article">
+                        <img src="./saia/pexels-ron-lach-9769853.jpg">
+                        <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center ">
+                            <h4 class="card-title">Ó C U L O S</h4>
+                            <a href="#" class="btn btn-primary">Ver produtos</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="border-top mt-5" id="loja">
+        <div class="row mt-5">
+            <div class="col-sm-12">
+                <div class="card text-bg-dark">
+                    <img src="./img/ai-generated-8612606_1920.png" class="w-100">
+                    <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+                        <div class="container">
+                            <h2 class="tittle-sobre h5 d-flex justify-content-center">
+                                A HISTORIA DA NOSSA LOJA PARA VOCÊ
+                            </h2>
+                            <p class="p-sobre-loja">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br>
+                                <br>
+                                Odio, libero. Cumque veritatis exercitationem voluptate, dolorem neque esse, eligendi error temporibus unde odit laudantium impedit? <br>
+                                <br>
+                                ssMollitia velit porro ex quidem eos?
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, aut veniam nostrum at, reiciendis nihil esse sint ipsum, accusamus repudiandae porro neque aperiam tempore quibusdam alias sequi culpa quia velit.
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores quia, non architecto at nam libero! Hic ab, molestias ex beatae eveniet quod maxime tenetur totam, repellat porro, excepturi iure labore.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. At, ratione deserunt delectus itaque corrupti quaerat cumque corporis accusamus totam aliquid maxime laboriosam voluptate saepe. Neque ab laboriosam nesciunt doloribus tempore.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row mb-5">
+                <h2 class="d-flex brand">
+                    <strong>Anselmo</strong>
+                    <strong>Via Mar</strong>
+                    <strong>Lança Perfume</strong>
+                    <strong>Shurtz</strong>
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white" id="contact">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-4 col-12 rede-social text-center">
+                    <h3 class="mb-4">Endereço</h3>
+                    <a href="#" class="link-light">Rua joão Lodeti - Içara SC</a><!--Link-light muda a cor do link. -->
+                </div>
+                <div class="col-lg-4 col-12 rede-social text-center">
+                    <h3 class="mb-4">Contato</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">suinai@hotmail.com</li>
+                        <li class="mb-2">(48) 99966-9999</li>
+                        <li>Segunda à Sexta. Das 9:00h às 18:00h  <br>
+                                        Sábado. Das 9:00h as 13:00h</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-12 rede-social text-center">
+                    <h3 class="mb-4 ">Redes sociais</h3>
+                    <ul class="list-unstyled d-flex justify-content-center">
+                        <li class="me-4">
+                            <a href="https://www.instagram.com/suianistore/" class="link-light">
+                                <i class="bi bi-instagram fs-1"></i>
+                            </a>
+                        </li>
+                        <li class="me-4">
+                            <a href="" class="link-light">
+                                <i class="bi bi-facebook fs-1"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="link-light">
+                                <i class="bi bi-whatsapp fs-1"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="./bootstrap.bundle.min.js"></script>
+</body>
+</html>
